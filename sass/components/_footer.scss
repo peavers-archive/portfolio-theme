@@ -1,0 +1,53 @@
+@import 'base';
+
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 200px;
+  width: 100%;
+}
+
+.upper-footer {
+
+  @include safe-rem(padding, 100 0);
+  background-color: $grey-900;
+  text-align: center;
+
+  li {
+    display: inline-block;
+
+    //email
+    &:nth-of-type(1):before {
+      @include icon(f003);
+      @include safe-rem(padding-right, 10);
+      color: $white;
+    }
+
+    //skype
+    &:nth-of-type(2):before {
+      @include icon(f17e);
+      @include safe-rem(padding-right, 10);
+      color: $white;
+    }
+
+    //linkdin
+    &:nth-of-type(3):before {
+      @include icon(f08c);
+      @include safe-rem(padding-right, 10);
+      color: $white;
+    }
+
+    //github
+    &:nth-of-type(4):before {
+      @include icon(f092);
+      @include safe-rem(padding-right, 10);
+      color: $white;
+    }
+
+    &:not(:last-of-type) {
+      @include safe-rem(margin-right, 50);
+    }
+  }
+
+}

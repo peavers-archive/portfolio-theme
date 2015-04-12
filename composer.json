@@ -1,0 +1,11 @@
+{
+  "name": "moe/portfolio-theme",
+  "description": "Theme for someones portfolio",
+  "type": "silverstripe-theme",
+  "authors": [
+    {
+      "name": "Chris Turner",
+      "email": "peavers@gmail.com"
+    }
+  ]
+}

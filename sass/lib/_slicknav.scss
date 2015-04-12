@@ -1,0 +1,68 @@
+@import '../components/base';
+
+.slicknav_menu {
+  @include breakpoint($mobile) {
+  }
+
+  @include breakpoint($tablet) {
+  }
+
+  @include breakpoint($desktop) {
+    display: none;
+  }
+}
+
+.slicknav_collapsed,
+.slicknav_open {
+  display: inline-block;
+  background: url('../../../themes/pisa-theme/images/pisa-logo.png') no-repeat;
+  width: 100%;
+  @include safe-rem(margin-top, 13);
+  @include safe-rem(height, 85);
+
+  .slicknav_menutxt {
+
+    @extend %base-shadow;
+
+    float: right;
+    color: $white;
+    background-color: $blue-500;
+    text-align: center;
+
+    @include safe-rem(margin-right, 12);
+    @include safe-rem(padding, 10);
+    @include transition(all .3s linear);
+
+    &:hover {
+      background-color: darken($blue-500, 20%);
+    }
+  }
+
+}
+
+.slicknav_nav {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, .8);
+  z-index: 999;
+  overflow: hidden;
+  margin-left: 0;
+
+  li {
+    background-color: $white;
+    border-bottom: 1px solid $grey-100;
+  }
+
+  a {
+    color: $black;
+    display: block;
+    @include safe-rem(padding, 10);
+
+    &:hover {
+      color: $white;
+      background-color: $blue-500;
+    }
+  }
+}
+

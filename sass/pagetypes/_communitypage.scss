@@ -1,0 +1,40 @@
+@import '../components/base';
+
+.side-content {
+  @include safe-rem(padding, 40);
+  position: relative;
+  border: 1px solid $grey-400;
+  border-radius: 3px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .6) 100%) $tan-500;
+  text-align: center;
+
+  img {
+    @include animate-drop();
+    @include delay(.65s);
+    width: 100%;
+    box-shadow: inset 0 0 0 3px $white, inset 0 0 0 4px rgba(0, 0, 0, .1), 0 1px 40px rgba(0, 0, 0, .15), 0 0 0 1px rgba(0, 0, 0, .1);
+  }
+
+  .button {
+    position: absolute;
+    right: 0;
+    bottom: -15px;
+    left: 0;
+    width: 180px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0;
+
+    &:before {
+      @include icon(f09b);
+      @include safe-rem(margin-right, 15);
+      @include safe-rem(font-size, 25);
+    }
+
+    .button-text {
+      vertical-align: text-bottom;
+    }
+
+  }
+
+}

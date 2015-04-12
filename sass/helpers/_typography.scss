@@ -1,0 +1,68 @@
+@import '../components/base';
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin: 0 0 200px;
+}
+
+html,
+body {
+  color: $grey-500;
+  font-family: 'OpenSans Regular', serif;
+}
+
+p {
+  @include safe-rem(font-size, 16);
+
+  + * {
+    @include safe-rem(margin-top, 10);
+    @include safe-rem(margin-bottom, 10);
+  }
+
+}
+
+h1 {
+  font-family: 'OpenSans Light', serif;
+}
+
+h2 {
+  @include safe-rem(font-size, 20);
+  @include safe-rem(padding-bottom, 40);
+  @include safe-rem(margin-bottom, 40);
+  padding-top: 15px;
+  border-bottom: 1px solid rgba(172, 172, 164, .3);
+  color: $tan-100;
+}
+
+h4 {
+  @include safe-rem(font-size, 14);
+  @include safe-rem(padding-top, 14);
+  @include safe-rem(margin-bottom, 50);
+  display: inline-block;
+  border-top: 1px solid $grey-300;
+  color: $grey-500;
+  font-family: 'OpenSans Bold', serif;
+  text-transform: uppercase;
+}
+
+strong {
+  @include safe-rem(font-size, 16);
+  font-family: 'OpenSans Bold', serif;
+}
+
+a:not(.button) {
+  @include transition(border-bottom-color .3s ease);
+  padding-bottom: 2px;
+  border: 0;
+  border-bottom: 1px solid rgba(172, 172, 164, 0);
+  color: $tan-100;
+  font-family: "OpenSans Bold", serif;
+
+  &:hover {
+    border-bottom: 1px solid rgba(172, 172, 164, .4);
+  }
+}

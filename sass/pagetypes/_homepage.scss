@@ -1,0 +1,160 @@
+@import '../components/base';
+
+.primary-message {
+
+  @include safe-rem(margin, 100 0);
+
+  h1 {
+    @include safe-rem(font-size, 32);
+    @include safe-rem(margin-bottom, 50);
+    @include animate-slide();
+  }
+
+  p {
+    @include animate-drop();
+    @include delay(1s);
+  }
+
+  .col-6 {
+    a {
+      color: $blue-500;
+    }
+  }
+
+  .col-6:nth-of-type(2) {
+    a {
+      color: $green-500;
+    }
+
+    p {
+      @include delay(1.25s);
+    }
+
+  }
+
+}
+
+.latest-project {
+
+  @include breakpoint($mobile) {
+    .laptop {
+      display: none;
+    }
+  }
+
+  @include breakpoint($tablet) {
+    .laptop {
+      display: none;
+    }
+  }
+
+  @include breakpoint($desktop) {
+    .laptop {
+      position: relative;
+      width: 100%;
+      height: 673px;
+      background: url('../../../themes/portfolio-theme/images/laptop.png') no-repeat;
+
+      img {
+        @include animate-screen();
+        @include delay(2s);
+        position: absolute;
+        bottom: 78px;
+        left: 141px;
+        width: 889px;
+        height: 556px;
+      }
+
+      .screen {
+        position: absolute;
+        bottom: 78px;
+        left: 141px;
+        width: 889px;
+        height: 556px;
+        background: $black;
+      }
+    }
+  }
+}
+
+.latest-project-details {
+  @include safe-rem(padding, 50 0);
+  border-top: 1px solid $grey-400;
+  border-bottom: 1px solid $grey-400;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .6) 100%) $tan-500;
+
+  h2 {
+    margin: 0;
+    border: 0;
+  }
+
+  .button {
+    color: $white;
+    background-color: $green-500;
+  }
+
+  .row:nth-of-type(3) {
+    @include safe-rem(padding, 50 0);
+    @include safe-rem(margin-top, 50);
+    border-top: 1px solid $grey-100;
+  }
+
+}
+
+.community-released {
+
+  @include safe-rem(margin, 100 0);
+
+  .col-4 {
+    @include safe-rem(margin, 50 0);
+    @include safe-rem(height, 400);
+    @include safe-rem(padding, 125 50 50 50);
+    position: relative;
+    border: 1px solid $grey-400;
+    border-radius: 3px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .6) 100%) $tan-500;
+    text-align: center;
+
+    p {
+      @include safe-rem(padding-bottom, 20);
+      @include safe-rem(line-height, 40);
+      font-family: "OpenSans LightItalic", serif;
+    }
+
+    img {
+      @extend %base-shadow;
+      position: absolute;
+      top: -50px;
+      left: 30%;
+
+      width: 150px;
+      height: 150px;
+      border-radius: 75px;
+
+    }
+  }
+
+  .button {
+    position: absolute;
+    right: 0;
+    bottom: -15px;
+    left: 0;
+    width: 180px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0;
+
+    &:before {
+      @include icon(f09b);
+      @include safe-rem(margin-right, 15);
+      @include safe-rem(font-size, 25);
+    }
+
+    .button-text {
+      vertical-align: text-bottom;
+    }
+
+  }
+
+}
+

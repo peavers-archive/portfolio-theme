@@ -1,0 +1,17 @@
+@import 'base';
+
+.button {
+  @extend %base-shadow;
+  font-family: 'OpenSans Bold', serif;
+  background-color: $grey-500;
+  color: $white;
+  text-align: center;
+  @include transition(all .4s ease-in-out);
+  @include safe-rem(padding, 10);
+  @include border-radius(3);
+
+  &:hover {
+    color: $white;
+    background-color: $grey-900;
+  }
+}
