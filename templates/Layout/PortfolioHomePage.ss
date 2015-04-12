@@ -20,7 +20,7 @@
 <section class="latest-project">
     <div class="row">
         <div class="col-12">
-            <h4>Latest work project</h4>
+            <h4>Latest project</h4>
         </div>
     </div>
 
@@ -51,7 +51,7 @@
 
     <div class="row">
         <div class="col-2">
-            <a class="button" href="$EnterpriseHolderLinkID">view other projects</a>
+            <a class="button" href="$EnterpriseHolderLink.Link">view other projects</a>
         </div>
         <div class="col-10">
             $ProjectButtonInfo
@@ -68,7 +68,7 @@
     </div>
 
     <div class="row">
-        <% loop $getCommunity %>
+        <% loop $getCommunity.Limit(3) %>
             <div class="col-4">
                 <img src="http://placehold.it/150x150">
                 <strong>$Title</strong>

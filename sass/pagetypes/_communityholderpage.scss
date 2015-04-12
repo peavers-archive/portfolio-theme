@@ -1,0 +1,25 @@
+@import '../components/base';
+
+.community-projects {
+
+  .col-3 {
+    @include safe-rem(margin-bottom, 50);
+    text-align: center;
+  }
+
+  img {
+    @extend %base-shadow;
+    @include transition(all .3s linear);
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+
+    &:hover {
+      border: 0;
+      transform: scale(1.05) translate3d(0, 0, 0);
+    }
+  }
+
+}
+

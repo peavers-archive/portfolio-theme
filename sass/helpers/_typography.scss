@@ -38,6 +38,10 @@ h2 {
   color: $tan-100;
 }
 
+h3 {
+  @include safe-rem(font-size, 18);
+}
+
 h4 {
   @include safe-rem(font-size, 14);
   @include safe-rem(padding-top, 14);
