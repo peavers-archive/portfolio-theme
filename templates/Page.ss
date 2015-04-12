@@ -36,7 +36,7 @@
 
     <% include GoogleTagManager %>
     $Layout
-
+    $Form
     <% include Footer %>
 </body>
 </html>

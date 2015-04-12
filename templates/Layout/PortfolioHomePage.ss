@@ -53,6 +53,7 @@
         <div class="col-2">
             <a class="button" href="$EnterpriseHolderLink.Link">view other projects</a>
         </div>
+
         <div class="col-10">
             $ProjectButtonInfo
         </div>
@@ -70,7 +71,7 @@
     <div class="row">
         <% loop $getCommunity.Limit(3) %>
             <div class="col-4">
-                <img src="http://placehold.it/150x150">
+                $Screen
                 <strong>$Title</strong>
 
                 <p>$Description</p>

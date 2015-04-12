@@ -11,6 +11,7 @@ footer {
 .upper-footer {
 
   @include safe-rem(padding, 100 0);
+  @include safe-rem(margin-top, 100);
   background-color: $grey-900;
   text-align: center;
 

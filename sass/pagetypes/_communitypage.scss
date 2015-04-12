@@ -1,5 +1,20 @@
 @import '../components/base';
 
+.community-page {
+  .fa {
+    @include safe-rem(font-size, 70);
+  }
+
+  .row {
+    @include safe-rem(margin-bottom, 40);
+  }
+
+  .col-2 {
+    text-align: center;
+  }
+
+}
+
 .side-content {
   @include safe-rem(padding, 40);
   position: relative;
@@ -16,6 +31,7 @@
   }
 
   .button {
+    @include button-icon($grey-500, f09b);
     position: absolute;
     right: 0;
     bottom: -15px;
@@ -23,18 +39,6 @@
     width: 180px;
     margin-right: auto;
     margin-left: auto;
-    padding: 0;
-
-    &:before {
-      @include icon(f09b);
-      @include safe-rem(margin-right, 15);
-      @include safe-rem(font-size, 25);
-    }
-
-    .button-text {
-      vertical-align: text-bottom;
-    }
-
   }
 
 }

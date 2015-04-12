@@ -140,4 +140,46 @@
   -webkit-animation-delay: $time;
 }
 
+@mixin button($color) {
+  @include transition(all .4s ease-in-out);
+  @include safe-rem(padding, 10);
+  @include border-radius(3);
+  display: block;
+  font-family: 'OpenSans Bold', serif;
+  background-color: $color;
+  color: $white;
+  text-align: center;
+
+  &:hover {
+    color: $white;
+    background-color: darken($color, 10%);
+  }
+}
+
+@mixin button-icon($color, $icon) {
+  @include transition(all .4s ease-in-out);
+  @include border-radius(3);
+  @include safe-rem(padding, 3);
+  text-align: center;
+  background-color: $color;
+  color: $white;
+  display: block;
+  font-family: 'OpenSans Bold', serif;
+
+  &:hover {
+    color: $white;
+    background-color: darken($color, 10%);
+  }
+
+  &:before {
+    @include icon($icon);
+    @include safe-rem(margin-right, 15);
+    @include safe-rem(font-size, 25);
+  }
+
+  .button-text {
+    vertical-align: text-bottom;
+  }
+}
+
 // scss-lint:enable all

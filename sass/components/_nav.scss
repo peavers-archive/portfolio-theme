@@ -18,8 +18,7 @@ nav {
   }
 
   .button {
-    color: $white;
-    background-color: $blue-500;
+    @include button($blue-500);
   }
 }
 
