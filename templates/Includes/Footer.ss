@@ -6,7 +6,7 @@
             <% end_loop %>
         </ul>
 
-        <p>Site build and design by Chris Turner</p>
+        <p>...design & build by Chris</p>
 
     </section>
 

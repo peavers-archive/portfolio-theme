@@ -1,7 +1,7 @@
 @import 'base';
 
 .success-message {
-  @include animate-screen();
+  @include animate-slide();
   @include delay(1);
   @include safe-rem(margin, 50 0);
   @include safe-rem(padding, 25 50);
@@ -19,8 +19,6 @@
 }
 
 .form {
-  @include animate-screen();
-  @include delay(0.25);
   border-top: 1px solid $grey-400;
   border-bottom: 1px solid $grey-400;
   background-color: $tan-500;

@@ -5,9 +5,15 @@
 }
 
 .enterprise-projects {
+
   border-top: 1px solid $grey-400;
   border-bottom: 1px solid $grey-400;
   background-color: $tan-500;
+
+  article {
+    @include animate-screen();
+    @include delay(.25);
+  }
 
   .col-12 {
     @include safe-rem(margin, 25 0);
@@ -16,4 +22,5 @@
     background-color: $white;
     box-shadow: 0 0 0 1px rgba(0, 0, 0, .1), 0 1px 4px rgba(0, 0, 0, .1);
   }
+
 }

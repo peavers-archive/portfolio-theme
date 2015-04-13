@@ -1,6 +1,7 @@
 @import '../components/base';
 
 .community-page {
+
   .fa {
     @include safe-rem(font-size, 70);
     color: $tan-100;
@@ -18,6 +19,7 @@
 
 .side-content {
   @include safe-rem(padding, 40);
+  @include safe-rem(margin-bottom, 200);
   position: relative;
   border: 1px solid $grey-400;
   border-radius: 3px;
