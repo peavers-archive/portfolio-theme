@@ -6,7 +6,7 @@
             <% end_loop %>
         </ul>
 
-        <p>...design & build by Chris</p>
+        <p>$SiteConfig.BottomLine</p>
 
     </section>
 
