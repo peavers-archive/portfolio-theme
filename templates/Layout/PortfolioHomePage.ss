@@ -69,12 +69,14 @@
     </div>
 
     <div class="row">
-        <% loop $getCommunity.Limit(3) %>
+        <% loop $getHomepageCommunity %>
             <div class="col-4">
-                $Screen
+                <a href="$Link">$Logo</a>
+
                 <strong>$Title</strong>
 
                 <p>$Description</p>
+
                 <a href="$Link">Further details</a>
                 <a class="button" href="$GitHubRepository"><span class="button-text">view on github</span></a>
             </div>

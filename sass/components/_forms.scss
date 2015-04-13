@@ -1,0 +1,125 @@
+@import 'base';
+
+.success-message {
+  @include animate-screen();
+  @include delay(1);
+  @include safe-rem(margin, 50 0);
+  @include safe-rem(padding, 25 50);
+  @include border-radius(3);
+  background-color: $white;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, .1), 0 1px 4px rgba(0, 0, 0, .1);
+}
+
+.form-inner {
+  @include safe-rem(margin, 50 0);
+  @include safe-rem(padding, 50);
+  @include border-radius(3);
+  background-color: $white;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, .1), 0 1px 4px rgba(0, 0, 0, .1);
+}
+
+.form {
+  @include animate-screen();
+  @include delay(0.25);
+  border-top: 1px solid $grey-400;
+  border-bottom: 1px solid $grey-400;
+  background-color: $tan-500;
+
+  .right {
+    font-size: 14px;
+    @include safe-rem(margin-top, -10);
+    @include safe-rem(margin-bottom, 10);
+  }
+
+  label {
+    display: block;
+
+    > span {
+      float: left;
+      color: $grey-600;
+      text-align: right;
+      @include safe-rem(font-size, 10);
+      @include safe-rem(width, 80);
+      @include safe-rem(padding-right, 10);
+      @include safe-rem(margin-top, 10);
+    }
+  }
+
+  input[type="file"],
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  textarea,
+  select {
+    width: 100%;
+    border: 2px solid $grey-100;
+    @include transition(all .2s ease-in);
+    @include safe-rem(margin-bottom, 20);
+    @include safe-rem(font-size, 16);
+    @include safe-rem(padding, 7);
+
+  }
+
+  select {
+    width: 100%;
+    text-indent: .01px;
+    text-overflow: '';
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    @include safe-rem(height, 30);
+  }
+
+  .field > label,
+  .field fieldset legend {
+    display: block;
+    color: $grey-600;
+  }
+
+  textarea {
+    @include safe-rem(height, 150);
+    @include transition(all .2s ease-in);
+  }
+
+  .req-indicator,
+  .required,
+  .validation,
+  .error {
+    color: $green-500;
+
+  }
+
+  .action {
+    @include button($green-500);
+  }
+
+  form ul.optionset {
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    list-style-type: none;
+    @include safe-rem(margin-bottom, 10);
+  }
+
+  form .optionset label,
+  form .checkbox label {
+    display: inline-block;
+  }
+
+  form .checkbox label {
+    display: inline;
+    padding: 0;
+    width: auto;
+    vertical-align: middle;
+  }
+
+  form .optionset input,
+  form .checkbox input {
+    display: inline;
+    padding: 0;
+    width: auto;
+    border: 0;
+    box-shadow: none;
+    vertical-align: middle;
+  }
+}

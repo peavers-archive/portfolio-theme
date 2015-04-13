@@ -31,12 +31,12 @@
 
 </head>
 
-<body class="index loading" class="$ClassName">
+<body class="$ClassName">
     <% include Header %>
 
     <% include GoogleTagManager %>
     $Layout
-    $Form
+
     <% include Footer %>
 </body>
 </html>

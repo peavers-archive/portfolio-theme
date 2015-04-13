@@ -5,7 +5,6 @@
   @include safe-rem(margin, 100 0);
 
   h1 {
-    @include safe-rem(font-size, 32);
     @include safe-rem(margin-bottom, 50);
     @include animate-slide();
   }
@@ -96,6 +95,11 @@
     @include safe-rem(padding, 50 0);
     @include safe-rem(margin-top, 50);
     border-top: 1px solid $grey-100;
+
+    p {
+      @include safe-rem(margin-top, 10);
+    }
+
   }
 }
 
@@ -112,23 +116,24 @@
     border-radius: 3px;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .6) 100%) $tan-500;
     text-align: center;
+  }
 
-    p {
-      @include safe-rem(padding-bottom, 20);
-      @include safe-rem(line-height, 40);
-      font-family: "OpenSans LightItalic", serif;
-    }
+  p {
+    @include safe-rem(padding-bottom, 20);
+    @include safe-rem(line-height, 40);
+    font-family: "OpenSans LightItalic", serif;
+  }
 
-    img {
-      @extend %base-shadow;
-      position: absolute;
-      top: -50px;
-      left: 30%;
+  img {
+    @extend %base-shadow;
+    @include transition(all .3s linear);
+    @include circle(125);
+    position: absolute;
+    top: -50px;
+    left: 30%;
 
-      width: 150px;
-      height: 150px;
-      border-radius: 75px;
-
+    &:hover {
+      transform: scale(1.05) translate3d(0, 0, 0);
     }
   }
 

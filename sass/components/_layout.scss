@@ -36,7 +36,7 @@ $grid-max-width: 1186px;
   }
 }
 
-.desktop-nav {
+header {
   @include breakpoint($mobile) {
     display: none;
   }

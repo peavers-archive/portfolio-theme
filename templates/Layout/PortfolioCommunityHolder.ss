@@ -17,7 +17,7 @@
     <div class="row">
         <% loop $getCommunity %>
             <div class="col-3">
-                <a href="$Link">$Screen</a>
+                <a href="$Link" class="button">$Logo</a>
 
                 <h3>$Title</h3>
 

@@ -10,16 +10,12 @@
   img {
     @extend %base-shadow;
     @include transition(all .3s linear);
-    position: relative;
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
+    @include circle(125);
+    display: inline-block;
 
     &:hover {
-      border: 0;
       transform: scale(1.05) translate3d(0, 0, 0);
     }
   }
-
 }
 

@@ -148,7 +148,11 @@
   font-family: 'OpenSans Bold', serif;
   background-color: $color;
   color: $white;
+  border: transparent;
+  cursor: pointer;
   text-align: center;
+  -webkit-box-shadow: rgba(0, 0, 0, .117647) 0 0 2px 0, rgba(0, 0, 0, .239216) 0 2px 4px 0;
+  box-shadow: rgba(0, 0, 0, .117647) 0 0 2px 0, rgba(0, 0, 0, .239216) 0 2px 4px 0;
 
   &:hover {
     color: $white;
@@ -168,7 +172,7 @@
 
   &:hover {
     color: $white;
-    background-color: darken($color, 10%);
+    background-color: darken($color, 15%);
   }
 
   &:before {
@@ -180,6 +184,12 @@
   .button-text {
     vertical-align: text-bottom;
   }
+}
+
+@mixin circle($radius) {
+  @include safe-rem(width, $radius);
+  @include safe-rem(height, $radius);
+  @include border-radius($radius/2);
 }
 
 // scss-lint:enable all
