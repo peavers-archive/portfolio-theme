@@ -130,7 +130,10 @@
     @include circle(125);
     position: absolute;
     top: -50px;
-    left: 30%;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
 
     &:hover {
       transform: scale(1.05) translate3d(0, 0, 0);
