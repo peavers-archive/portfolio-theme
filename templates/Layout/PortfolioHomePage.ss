@@ -38,7 +38,7 @@
     <section class="latest-project-details">
         <div class="row">
             <div class="col-12">
-                <h2>$ProjectName</h2>
+                <h2>$Title</h2>
             </div>
         </div>
         <div class="row">
@@ -52,7 +52,7 @@
 
         <div class="row">
             <div class="col-2">
-                <a class="button" href="$EnterpriseHolderLink.Link">view other projects</a>
+                <a class="button" href="$Parent.Link">view other projects</a>
             </div>
 
             <div class="col-10">
