@@ -66,7 +66,7 @@
 <section class="community-released">
     <div class="row">
         <div class="col-12">
-            <h4>Community/public releases</h4>
+            <h4>Open Source projects</h4>
         </div>
     </div>
 
