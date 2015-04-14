@@ -5,6 +5,8 @@
 
             <h2>$Description</h2>
 
+            $Content
+
             <% loop $PortfolioCommunityFeature %>
                 <div class="row">
                     <div class="col-2">
