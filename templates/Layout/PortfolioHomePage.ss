@@ -80,7 +80,7 @@
                 <p>$Description</p>
 
                 <a href="$Link">Further details</a>
-                <a class="button" href="$GitHubRepository"><span class="button-text">view on github</span></a>
+                <a class="button" href="$GitHubRepository" target="_blank"><span class="button-text">view on github</span></a>
             </div>
         <% end_loop %>
     </div>
