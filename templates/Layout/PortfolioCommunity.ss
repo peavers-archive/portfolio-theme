@@ -8,7 +8,7 @@
             <% loop $PortfolioCommunityFeature %>
                 <div class="row">
                     <div class="col-2">
-                        <i class="fa fa-$Icon"></i>
+                        <i class="fa $Icon"></i>
                     </div>
                     <div class="col-10">
                         <h3>$Title</h3>
