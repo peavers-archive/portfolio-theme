@@ -22,7 +22,7 @@
 
         <div class="col-6 side-content">
             <ul>
-                <li><span class="screen">$Screen</span></li>
+                <li><span class="screen">$Screen.CroppedImage(449, 380)</span></li>
                 <li><span class="logo">$Logo</span></li>
             </ul>
             <a class="button" href="$GitHubRepository"><span class="button-text">view on github</span></a>
