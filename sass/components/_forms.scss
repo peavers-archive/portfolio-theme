@@ -22,6 +22,7 @@
   border-top: 1px solid $grey-400;
   border-bottom: 1px solid $grey-400;
   background-color: $tan-500;
+  min-height: 816px;
 
   .right {
     font-size: 14px;
@@ -41,6 +42,11 @@
       @include safe-rem(padding-right, 10);
       @include safe-rem(margin-top, 10);
     }
+  }
+
+  p + fieldset {
+    margin: 0;
+    padding: 0;
   }
 
   input[type="file"],
@@ -70,6 +76,8 @@
 
   .field > label,
   .field fieldset legend {
+    @include safe-rem(padding-bottom, 15);
+    line-height: 0;
     display: block;
     color: $grey-600;
   }
@@ -89,6 +97,7 @@
 
   .action {
     @include button($green-500);
+    @include safe-rem(font-size, 16);
   }
 
   form ul.optionset {
@@ -121,3 +130,4 @@
     vertical-align: middle;
   }
 }
+

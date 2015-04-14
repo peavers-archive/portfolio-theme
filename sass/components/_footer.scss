@@ -30,7 +30,8 @@ footer {
 
   p {
     @include safe-rem(margin-top, 50);
-    color: $white;
+    @include safe-rem(font-size, 14);
+    color: $tan-100;
     text-align: center;
   }
 }
