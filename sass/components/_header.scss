@@ -17,7 +17,6 @@ header {
   }
 
   .profile-photo {
-    @extend %base-shadow;
     @include circle(80);
   }
 

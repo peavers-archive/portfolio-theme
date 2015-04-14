@@ -11,16 +11,18 @@
   background-color: $tan-500;
 
   article {
+    @include safe-rem(margin, 50 0);
     @include animate-screen();
     @include delay(.25);
-  }
+    background-color: $tan-500;
 
-  .col-12 {
-    @include safe-rem(margin, 25 0);
-    @include safe-rem(padding, 50);
-    @include border-radius(3);
-    background-color: $white;
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, .1), 0 1px 4px rgba(0, 0, 0, .1);
+    > .row {
+      @include safe-rem(padding, 50);
+      @include border-radius(3);
+      background-color: $white;
+      box-shadow: 0 0 0 1px rgba(0, 0, 0, .1), 0 1px 4px rgba(0, 0, 0, .1);
+    }
   }
-
 }
+
+

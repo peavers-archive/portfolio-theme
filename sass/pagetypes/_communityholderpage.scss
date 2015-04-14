@@ -8,7 +8,6 @@
   }
 
   img {
-    @extend %base-shadow;
     @include transition(all .3s linear);
     @include circle(125);
     display: inline-block;
