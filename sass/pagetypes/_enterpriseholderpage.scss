@@ -1,9 +1,5 @@
 @import '../components/base';
 
-.intro-content {
-  @include safe-rem(margin, 0 0 50 0);
-}
-
 .enterprise-projects {
 
   border-top: 1px solid $grey-400;

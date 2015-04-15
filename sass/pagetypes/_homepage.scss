@@ -5,7 +5,6 @@
   @include safe-rem(margin, 100 0);
 
   h1 {
-    @include safe-rem(margin-bottom, 50);
     @include animate-slide();
   }
 
@@ -81,6 +80,9 @@
 
 .latest-project-details {
   @include safe-rem(padding, 50 0);
+  @include safe-rem(margin-bottom, 100);
+
+
   border-top: 1px solid $grey-400;
   border-bottom: 1px solid $grey-400;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .6) 100%) $tan-500;
@@ -108,8 +110,6 @@
 
 .community-released {
 
-  @include safe-rem(margin, 100 0);
-
   .col-4 {
     @include safe-rem(margin, 50 0);
     @include safe-rem(height, 400);
@@ -131,7 +131,7 @@
     @include transition(all .3s linear);
     @include circle(125);
     position: absolute;
-    top: -50px;
+    top: -15px;
     right: 0;
     left: 0;
     margin-right: auto;

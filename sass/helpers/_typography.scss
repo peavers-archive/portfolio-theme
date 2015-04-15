@@ -26,6 +26,7 @@ p {
 }
 
 h1 {
+  @include safe-rem(margin-bottom, 25);
   font-family: 'OpenSans Light', serif;
 }
 
@@ -33,7 +34,6 @@ h2 {
   @include safe-rem(font-size, 20);
   @include safe-rem(padding-bottom, 40);
   @include safe-rem(margin-bottom, 40);
-  padding-top: 15px;
   border-bottom: 1px solid rgba(172, 172, 164, .3);
   color: $tan-100;
 }
