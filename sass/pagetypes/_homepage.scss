@@ -111,7 +111,7 @@
 .community-released {
 
   .col-4 {
-    @include safe-rem(margin, 0 0 50 0);
+    @include safe-rem(margin, 0 0 100 0);
     @include safe-rem(height, 400);
     @include safe-rem(padding, 125 50 50 50);
     position: relative;

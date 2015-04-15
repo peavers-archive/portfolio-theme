@@ -21,7 +21,7 @@
     <section class="latest-project">
         <div class="row">
             <div class="col-12">
-                <h4>Latest project</h4>
+                <h4>Latest proprietary project</h4>
             </div>
         </div>
 

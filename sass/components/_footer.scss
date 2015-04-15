@@ -1,35 +1,48 @@
 @import 'base';
 
 footer {
+  @include safe-rem(font-size, 14);
   position: absolute;
   left: 0;
   bottom: 0;
-  height: 200px;
   width: 100%;
-}
-
-.upper-footer {
-  @include safe-rem(padding, 100 0);
-  @include safe-rem(font-size, 14);
   background-color: $grey-900;
-
-  text-align: center;
 
   .fa {
     @include safe-rem(padding-right, 5);
     color: $white;
   }
 
+  ul {
+    @include safe-rem(padding, 100 0 0 0);
+    text-align: center;
+  }
+
   li {
     display: inline-block;
 
-    &:not(:last-of-type) {
-      @include safe-rem(margin-right, 50);
+    // Stack footer links in mobile view
+    @include breakpoint($mobile) {
+      @include safe-rem(margin, 10 0);
+      display: block;
     }
+
+    // Stack footer links in tablet view
+    @include breakpoint($tablet) {
+      @include safe-rem(margin, 10 0);
+      display: block;
+    }
+
+    @include breakpoint($desktop) {
+      &:not(:last-of-type) {
+        @include safe-rem(margin-right, 50);
+      }
+    }
+
   }
 
   p {
-    @include safe-rem(margin-top, 50);
+    @include safe-rem(padding, 50 0);
     @include safe-rem(font-size, 14);
     color: $tan-100;
     text-align: center;
