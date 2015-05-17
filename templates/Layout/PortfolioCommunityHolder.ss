@@ -34,9 +34,8 @@
 
 <section class="community-projects">
 
-    <div class="row container" id="Container">
+    <div class="row container" id="container">
         <% loop $Children %>
-
             <div class="col-3 mix <% loop $getTag %>category-$Title <% end_loop %>">
                 <a href="$Link" class="button">$Logo</a>
 

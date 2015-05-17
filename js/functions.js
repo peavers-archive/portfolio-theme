@@ -15,23 +15,11 @@ jQuery(function ($) {
     }
 
     function sortProjects() {
-        $('#Container').mixItUp({
+        $('#container').mixItUp({
             animation: {
                 effects: 'fade',
                 duration: '250'
             }
-            //load: {
-            //    filter: ''
-            //},
-            //controls: {
-            //    toggleFilterButtons: true,
-            //    toggleLogic: 'and'
-            //},
-            //callbacks: {
-            //    onMixEnd: function (state) {
-            //        console.log(state.activeFilter)
-            //    }
-            //}
         });
     }
 

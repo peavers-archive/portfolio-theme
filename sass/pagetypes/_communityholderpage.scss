@@ -1,6 +1,7 @@
 @import '../components/base';
 
 .community-projects {
+  @include safe-rem(padding-bottom, 50);
 
   .col-3 {
     @include safe-rem(margin-bottom, 50);
