@@ -37,7 +37,7 @@
     <div class="row container" id="Container">
         <% loop $Children %>
 
-            <div class="col-3 mix <% loop $getTestTag %>category-$Title <% end_loop %>">
+            <div class="col-3 mix <% loop $getTag %>category-$Title <% end_loop %>">
                 <a href="$Link" class="button">$Logo</a>
 
                 <h3>$Title</h3>
