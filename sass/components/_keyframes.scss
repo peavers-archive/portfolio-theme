@@ -1,26 +1,27 @@
 @import 'base';
 
+// scss-lint:disable all
 @-webkit-keyframes slide {
   from {
+    @include translate(-40px, 0);
     opacity: 0;
-    -webkit-transform: translateX(-40px);
   }
 
   to {
+    @include translate(0, 0);
     opacity: 1;
-    -webkit-transform: translateX(0px);
   }
 }
 
 @-webkit-keyframes drop {
   from {
+    @include translate(0, -20px);
     opacity: 0;
-    -webkit-transform: translateY(-20px);
   }
 
   to {
+    @include translate(0, 0);
     opacity: 1;
-    -webkit-transform: translateY(0px);
   }
 }
 
@@ -33,3 +34,4 @@
     opacity: 1;
   }
 }
+// scss-lint:enable all

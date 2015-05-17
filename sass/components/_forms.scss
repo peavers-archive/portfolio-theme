@@ -19,28 +19,28 @@
 }
 
 .form {
+  min-height: 816px;
   border-top: 1px solid $grey-400;
   border-bottom: 1px solid $grey-400;
   background-color: $tan-500;
-  min-height: 816px;
 
   .right {
-    font-size: 14px;
     @include safe-rem(margin-top, -10);
     @include safe-rem(margin-bottom, 10);
+    font-size: 14px;
   }
 
   label {
     display: block;
 
     > span {
-      float: left;
-      color: $grey-600;
-      text-align: right;
       @include safe-rem(font-size, 10);
       @include safe-rem(width, 80);
       @include safe-rem(padding-right, 10);
       @include safe-rem(margin-top, 10);
+      float: left;
+      color: $grey-600;
+      text-align: right;
     }
   }
 
@@ -49,37 +49,32 @@
     padding: 0;
   }
 
-  input[type="file"],
-  input[type="text"],
-  input[type="email"],
-  input[type="password"],
+  input,
   textarea,
   select {
-    width: 100%;
-    border: 2px solid $grey-100;
     @include transition(all .2s ease-in);
     @include safe-rem(margin-bottom, 20);
     @include safe-rem(font-size, 16);
     @include safe-rem(padding, 7);
-
+    width: 100%;
+    border: 2px solid $grey-100;
   }
 
   select {
+    @include safe-rem(height, 30);
     width: 100%;
     text-indent: .01px;
     text-overflow: '';
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    @include safe-rem(height, 30);
   }
 
-  .field > label,
-  .field fieldset legend {
+  fieldset legend {
     @include safe-rem(padding-bottom, 15);
-    line-height: 0;
     display: block;
     color: $grey-600;
+    line-height: 0;
   }
 
   textarea {
@@ -98,36 +93,6 @@
   .action {
     @include button($green-500);
     @include safe-rem(font-size, 16);
-  }
-
-  form ul.optionset {
-    display: block;
-    overflow: hidden;
-    margin: 0;
-    list-style-type: none;
-    @include safe-rem(margin-bottom, 10);
-  }
-
-  form .optionset label,
-  form .checkbox label {
-    display: inline-block;
-  }
-
-  form .checkbox label {
-    display: inline;
-    padding: 0;
-    width: auto;
-    vertical-align: middle;
-  }
-
-  form .optionset input,
-  form .checkbox input {
-    display: inline;
-    padding: 0;
-    width: auto;
-    border: 0;
-    box-shadow: none;
-    vertical-align: middle;
   }
 }
 

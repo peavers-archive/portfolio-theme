@@ -26,13 +26,13 @@ $grid-max-width: 1186px;
   margin: 0 auto;
 
   @include breakpoint($mobile) {
-    margin: 0 auto;
     @include safe-rem(padding, 0 10);
+    margin: 0 auto;
   }
 
   @include breakpoint($tablet) {
-    margin: 0 auto;
     @include safe-rem(padding, 0 10);
+    margin: 0 auto;
   }
 }
 

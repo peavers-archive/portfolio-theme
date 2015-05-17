@@ -5,17 +5,15 @@ nav {
   @include safe-rem(margin-top, 23);
   float: right;
 
-
-
   a {
     @include safe-rem(font-size, 14);
-    text-transform: uppercase;
     color: $tan-100;
+    text-transform: uppercase;
   }
 
   .current {
-    color: $black;
     border-bottom: 1px solid rgba(172, 172, 164, .4);
+    color: $black;
   }
 
   .button {
