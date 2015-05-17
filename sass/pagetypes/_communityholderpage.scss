@@ -18,3 +18,51 @@
   }
 }
 
+.community-filter-control {
+
+  @include safe-rem(margin-bottom, 50);
+
+  li {
+    display: inline-block;
+  }
+
+  .filter {
+    @include button($blue-500);
+  }
+
+  .active {
+    @include button($green-500);
+  }
+
+}
+
+//
+.container {
+  -webkit-backface-visibility: hidden;
+}
+
+.container:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+
+.container .mix {
+  display: none;
+}
+
+.container .mix:after {
+  content: attr(class);
+  color: white;
+  font-size: 16px;
+  display: inline-block;
+  vertical-align: top;
+  padding: 4% 6%;
+  font-weight: 700;
+}
+
+.container .mix:before {
+  content: '';
+  display: inline-block;
+  padding-top: 60%;
+}

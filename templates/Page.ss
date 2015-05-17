@@ -39,7 +39,6 @@
 <body class="$ClassName">
     <% include Header %>
 
-    <% include GoogleTagManager %>
     $Layout
 
     <% include Footer %>

@@ -1,18 +1,43 @@
 #!/bin/sh
 
 #==============
-# Install requirements
+# Install required packages
 #==============
-requiredFiles() {
+requiredPackages() {
 
-    apt-get install --yes ruby
+    apt-get update
 
-    # Check if the gem is already installed, skip if it is.
-    if [ ! 'gem list scss-lint -i' ]; then
-        gem install scss-lint
-    else
-        echo 'INFO: Required gem already installed, skipping';
-    fi
+    # Additional packages that are required by this script
+    apt-get install -y -q curl npm nodejs-legacy
+
+    # Install these globally as required
+    npm install -g grunt-cli
+
+}
+
+#==============
+# Install for clean setup
+#==============
+rubyInstall() {
+
+    # Remove current ruby
+    apt-get purge ruby
+
+    # Required packages
+    \curl -L https://get.rvm.io | bash -s stable
+
+    # Enable RVM
+    source ~/.rvm/scripts/rvm
+
+    # Ruby
+    rvm requirements
+    rvm install ruby
+    rvm use ruby --default
+
+    # Gems
+    gem update --system
+    gem install sass
+    gem install scss_lint
 
 }
 
@@ -26,8 +51,8 @@ submodule() {
         git submodule init
         git submodule add https://gitlab.cwp.govt.nz/build-tools/grunt-base.git
     else
-        echo 'ERROR: Must be ran from a git initalized directory';
-        exit;
+        git init
+        submodule;
     fi
 
 }
@@ -60,7 +85,36 @@ setupGrunt() {
 
 }
 
-requiredFiles;
-submodule;
-setupGrunt;
+#==============
+# Menu
+#==============
+main() {
 
+    clear
+
+    until [ "$REPLY" = "q" ]; do
+        echo '#-----------------------------------------------#'
+        echo '#   Grunt setup                                 #'
+        echo '#-----------------------------------------------#'
+        echo ''
+        echo '1.  Install ruby & gems (for a clean server)'
+        echo '2.  Install grunt-base'
+        echo '3.  Install everything!'
+        echo ''
+        echo '#-----------------------------------------------#'
+        echo 'q.  Quit'
+        echo ''
+        read -p 'Command : ' REPLY
+        case $REPLY in
+            1) clear && requiredPackages && rubyInstall;;
+            2) clear && submodule &&  setupGrunt;;
+            [Qq]*) clear && quit ;;
+        esac
+    done
+
+}
+
+#==============
+# Call the menu
+#==============
+main
