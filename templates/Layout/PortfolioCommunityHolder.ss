@@ -15,7 +15,7 @@
 <section class="community-filter-control">
     <div class="row">
         <div class="col-12">
-            <h4>Filter by</h4>
+            <h4>Language filter</h4>
             <ul>
                 <li>
                     <div class="filter" data-filter="all">Show All</div>

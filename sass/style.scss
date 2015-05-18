@@ -6,7 +6,6 @@
 ///////////////////////
 // Font Imports
 ///////////////////////
-@include font-face('FontAwesome', '../../../themes/portfolio-theme/fonts/fontawesome-webfont');
 @include font-face('Opensans Regular', '../../../themes/portfolio-theme/fonts/opensans-regular-webfont');
 @include font-face('Opensans Bold', '../../../themes/portfolio-theme/fonts/opensans-bold-webfont');
 @include font-face('Opensans BoldItalic', '../../../themes/portfolio-theme/fonts/opensans-bolditalic-webfont');
@@ -44,5 +43,4 @@
 ///////////////////////
 // Vendor Libraries
 ///////////////////////
-@import 'lib/fontawesome';
 @import 'lib/slicknav';
