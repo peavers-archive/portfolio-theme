@@ -28,7 +28,14 @@
         <div class="row">
             <div class="col-12">
                 <ul>
-                    <li class="laptop"><span class="screen"></span>$ProjectImage</li>
+                    <li class="laptop">
+                        <span class="screen"></span>
+                        <% if $ProjectImage %>
+                            $ProjectImage.CroppedImage(889, 556)
+                        <% else %>
+                            <img src="http://placehold.it/889x556"/>
+                        <% end_if %>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -72,8 +79,15 @@
 
     <div class="row">
         <% loop $getHomepageCommunity %>
+
             <div class="col-4">
-                <a href="$Link">$Logo</a>
+                <a href="$Link">
+                    <% if $logo %>
+                        $logo.CroppedImage(125, 125)
+                    <% else %>
+                        <img src="http://placehold.it/125x125"/>
+                    <% end_if %>
+                </a>
 
                 <strong>$Title</strong>
 

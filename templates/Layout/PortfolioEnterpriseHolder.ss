@@ -25,7 +25,11 @@
                 </div>
 
                 <div class="col-6">
-                    $ProjectImage
+                    <% if $ProjectImage %>
+                        $ProjectImage.CroppedImage(522, 297)
+                    <% else %>
+                        <img src="http://placehold.it/522x297"/>
+                    <% end_if %>
                 </div>
             </div>
 

@@ -22,8 +22,24 @@
 
         <div class="col-6 side-content">
             <ul>
-                <li><span class="screen">$Screen</span></li>
-                <li><span class="logo">$Logo</span></li>
+                <li>
+                    <span class="screen">
+                        <% if $Screen %>
+                            $Screen.CroppedImage(489, 400)
+                        <% else %>
+                            <img src="http://placehold.it/489x400"/>
+                        <% end_if %>
+                    </span>
+                </li>
+                <li>
+                    <span class="logo">
+                        <% if $logo %>
+                            $logo.CroppedImage(125, 125)
+                        <% else %>
+                            <img src="http://placehold.it/125x125"/>
+                        <% end_if %>
+                    </span>
+                </li>
             </ul>
             <a class="button" href="$GitHubRepository" target="_blank"><span class="button-text">view on github</span></a>
         </div>
