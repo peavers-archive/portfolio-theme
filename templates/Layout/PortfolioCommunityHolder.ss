@@ -28,17 +28,19 @@
             </ul>
         </div>
     </div>
-
-
 </section>
 
 <section class="community-projects">
-
     <div class="row container" id="container">
         <% loop $Children %>
             <div class="col-3 mix <% loop $getTag %>category-$Title <% end_loop %>">
-                <a href="$Link" class="button">$Logo</a>
-
+                <a href="$Link" class="button">
+                    <% if $logo %>
+                        $logo.CroppedImage(125, 125)
+                    <% else %>
+                        <img src="http://placehold.it/125x125"/>
+                    <% end_if %>
+                </a>
                 <h3>$Title</h3>
             </div>
         <% end_loop %>
