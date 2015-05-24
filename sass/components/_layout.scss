@@ -21,6 +21,16 @@ $grid-padding: 10px;
 // Set Grid Max Width (as px)
 $grid-max-width: 1186px;
 
+html,
+body {
+  height: 100%;
+}
+
+.page-wrapper {
+  min-height: 100%;
+  margin: 0 auto -210px;
+}
+
 .row {
   @include col-container;
   margin: 0 auto;

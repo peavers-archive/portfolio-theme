@@ -1,10 +1,13 @@
 @import 'base';
 
+.push {
+  @include safe-rem(height, 210);
+}
+
 footer {
+  @include safe-rem(height, 210);
   @include safe-rem(font-size, 14);
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  display: block;
   width: 100%;
   background-color: $grey-900;
 
@@ -14,7 +17,7 @@ footer {
   }
 
   ul {
-    @include safe-rem(padding, 100 0 0 0);
+    @include safe-rem(padding, 75 0 0 0);
     text-align: center;
   }
 
@@ -42,9 +45,12 @@ footer {
   }
 
   p {
-    @include safe-rem(padding, 50 0);
+    @include safe-rem(padding, 25 0);
     @include safe-rem(font-size, 14);
+    display: block;
+    width: 100%;
     color: $tan-100;
+    background-color: $grey-900;
     text-align: center;
   }
 }

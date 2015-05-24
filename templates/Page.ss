@@ -37,10 +37,12 @@
 </head>
 
 <body class="$ClassName">
+<div class="page-wrapper">
     <% include Header %>
-
     $Layout
 
+</div>
+<div class="push"></div>
     <% include Footer %>
 </body>
 </html>
