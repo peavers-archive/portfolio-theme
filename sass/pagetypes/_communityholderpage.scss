@@ -1,4 +1,4 @@
-@import '../components/base';
+@import "../components/base";
 
 .community-projects {
   @include safe-rem(min-height, 800);
@@ -10,7 +10,7 @@
   }
 
   img {
-    @include transition(all .3s linear);
+    @include transition(all 0.3s linear);
     @include circle(125);
     display: inline-block;
 
@@ -21,7 +21,6 @@
 }
 
 .community-filter-control {
-
   @include safe-rem(margin-bottom, 50);
 
   li {
@@ -35,14 +34,11 @@
   .active {
     @include button($green-500);
   }
-
 }
 
 //
 .container {
-
   .mix {
     display: none;
   }
 }
-

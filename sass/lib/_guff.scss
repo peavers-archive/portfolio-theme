@@ -1,22 +1,89 @@
 // ###Reset
 
 // Mixin Reset
-@mixin reset(){
-
+@mixin reset() {
   // Reset all browser styles & set font-size to 100%
-  html, body, div, span, applet, object, iframe,
-  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-  a, abbr, acronym, address, big, cite, code,
-  del, dfn, em, img, ins, kbd, q, s, samp,
-  small, strike, strong, sub, sup, tt, var,
-  b, u, i, center,
-  dl, dt, dd, ol, ul, li,
-  fieldset, form, label, legend,
-  table, caption, tbody, tfoot, thead, tr, th, td,
-  article, aside, canvas, details, embed,
-  figure, figcaption, footer, header, hgroup,
-  menu, nav, output, ruby, section, summary,
-  time, mark, audio, video {
+  html,
+  body,
+  div,
+  span,
+  applet,
+  object,
+  iframe,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  blockquote,
+  pre,
+  a,
+  abbr,
+  acronym,
+  address,
+  big,
+  cite,
+  code,
+  del,
+  dfn,
+  em,
+  img,
+  ins,
+  kbd,
+  q,
+  s,
+  samp,
+  small,
+  strike,
+  strong,
+  sub,
+  sup,
+  tt,
+  var,
+  b,
+  u,
+  i,
+  center,
+  dl,
+  dt,
+  dd,
+  ol,
+  ul,
+  li,
+  fieldset,
+  form,
+  label,
+  legend,
+  table,
+  caption,
+  tbody,
+  tfoot,
+  thead,
+  tr,
+  th,
+  td,
+  article,
+  aside,
+  canvas,
+  details,
+  embed,
+  figure,
+  figcaption,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  output,
+  ruby,
+  section,
+  summary,
+  time,
+  mark,
+  audio,
+  video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -26,13 +93,24 @@
   }
 
   // Set HTML5 elements to block
-  article, aside, details, figcaption, figure,
-  footer, header, hgroup, main, menu, nav, section {
+  article,
+  aside,
+  details,
+  figcaption,
+  figure,
+  footer,
+  header,
+  hgroup,
+  main,
+  menu,
+  nav,
+  section {
     display: block;
   }
 
   // Remove built in list styling
-  ol, ul {
+  ol,
+  ul {
     list-style: none;
   }
 
@@ -42,14 +120,17 @@
   }
 
   // Normalize block quotes
-  blockquote, q {
+  blockquote,
+  q {
     quotes: none;
   }
 
   // Remove pseudo elements
-  blockquote:before, blockquote:after,
-  q:before, q:after {
-    content: '';
+  blockquote:before,
+  blockquote:after,
+  q:before,
+  q:after {
+    content: "";
     content: none;
   }
 
@@ -63,7 +144,6 @@
   * {
     @include box-sizing(border-box);
   }
-
 }
 // ###Settings
 
@@ -99,7 +179,7 @@ $grid-max-width: 1024px !default;
 }
 
 // Converts to rem, utility for rem-calc
-@function _convert-to-rem($value, $base-value: $rem-base)  {
+@function _convert-to-rem($value, $base-value: $rem-base) {
   @if type-of($value) != "number" {
     @warn "value: #{$value} is not a number";
     @return null;
@@ -109,7 +189,9 @@ $grid-max-width: 1024px !default;
     @return null;
   }
   $value: _strip-unit($value) / _strip-unit($base-value) * 1rem;
-  @if (_strip-unit($value) == 0) { $value: 0; } // Turn 0rem into 0
+  @if (_strip-unit($value) == 0) {
+    $value: 0;
+  } // Turn 0rem into 0
   @return $value;
 }
 
@@ -124,10 +206,15 @@ $grid-max-width: 1024px !default;
     @return null;
   }
   $max: length($values);
-  @if $max == 1 { @return _convert-to-rem(nth($values, 1), $base-value); }
+  @if $max == 1 {
+    @return _convert-to-rem(nth($values, 1), $base-value);
+  }
   $remValues: ();
   @for $i from 1 through $max {
-    $remValues: append($remValues, _convert-to-rem(nth($values, $i), $base-value));
+    $remValues: append(
+      $remValues,
+      _convert-to-rem(nth($values, $i), $base-value)
+    );
   }
   @return $remValues;
 }
@@ -186,7 +273,7 @@ $grid-max-width: 1024px !default;
       font-size: rem-calc($rem-base);
     }
     &:after {
-      content: '';
+      content: "";
       display: inline-block;
       width: 100%;
     }
@@ -282,7 +369,6 @@ $grid-max-width: 1024px !default;
   }
 }
 
-
 // Renders fully prefixed transform
 @mixin transform($property: none) {
   $valid: false;
@@ -300,7 +386,7 @@ $grid-max-width: 1024px !default;
 }
 
 // Renders fully prefixed box-sizing
-@mixin box-sizing ($box: border-box) {
+@mixin box-sizing($box: border-box) {
   $valid: true;
   @if type-of($box) != "string" {
     @warn "box: #{$box} is not a string";
@@ -359,12 +445,11 @@ $grid-max-width: 1024px !default;
   @if $valid == true {
     @if $extend {
       @extend %clear;
-    }
-    @else {
-      #{'&'}:after {
-        content:"";
-        display:table;
-        clear:both;
+    } @else {
+      #{"&"}:after {
+        content: "";
+        display: table;
+        clear: both;
       }
     }
   }
@@ -372,9 +457,9 @@ $grid-max-width: 1024px !default;
 
 // Placeholder for clear
 %clear:after {
-  content:"";
-  display:table;
-  clear:both;
+  content: "";
+  display: table;
+  clear: both;
 }
 
 // Text hider
@@ -388,9 +473,8 @@ $grid-max-width: 1024px !default;
   @if $valid == true {
     @if $extend {
       @extend %hide-text;
-    }
-    @else {
-      overflow:hidden;
+    } @else {
+      overflow: hidden;
       text-indent: 100%;
       white-space: nowrap;
     }
@@ -399,7 +483,7 @@ $grid-max-width: 1024px !default;
 
 // Placeholder for hide-text
 %hide-text {
-  overflow:hidden;
+  overflow: hidden;
   text-indent: 100%;
   white-space: nowrap;
 }
@@ -413,14 +497,14 @@ $grid-max-width: 1024px !default;
     $valid: false;
   }
   @if $valid == true {
-    list-style-type:none;
-    padding:0;
-    margin:0;
-    overflow:hidden;
-    > li{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    > li {
       @if $float == true {
-        display:block;
-        float:left;
+        display: block;
+        float: left;
       } @else {
         display: inline-block;
       }
@@ -430,7 +514,11 @@ $grid-max-width: 1024px !default;
 // ###Typography
 
 // Typographic Rhythm Mixin
-@mixin type($rem-base: $rem-base,$line-height-base: $line-height-base, $type-rhythm-ratio: $type-rhythm-ratio){
+@mixin type(
+  $rem-base: $rem-base,
+  $line-height-base: $line-height-base,
+  $type-rhythm-ratio: $type-rhythm-ratio
+) {
   $valid: true;
   @if type-of($rem-base) != "number" {
     @warn "rem-base: #{$rem-base} is not a number";

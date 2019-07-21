@@ -1,4 +1,4 @@
-@import 'base';
+@import "base";
 
 .push {
   @include safe-rem(height, 210);
@@ -41,7 +41,6 @@ footer {
         @include safe-rem(margin-right, 50);
       }
     }
-
   }
 
   p {
@@ -54,4 +53,3 @@ footer {
     text-align: center;
   }
 }
-

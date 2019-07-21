@@ -1,7 +1,6 @@
-@import 'base';
+@import "base";
 
 nav {
-
   @include safe-rem(margin-top, 23);
   float: right;
 
@@ -12,7 +11,7 @@ nav {
   }
 
   .current {
-    border-bottom: 1px solid rgba(172, 172, 164, .4);
+    border-bottom: 1px solid rgba(172, 172, 164, 0.4);
     color: $black;
   }
 
@@ -20,4 +19,3 @@ nav {
     @include button($blue-500);
   }
 }
-

@@ -1,4 +1,4 @@
-@import 'components/base';
+@import "components/base";
 
 @include reset;
 @include type;
@@ -6,41 +6,65 @@
 ///////////////////////
 // Font Imports
 ///////////////////////
-@include font-face('Opensans Regular', '../../../themes/portfolio-theme/fonts/opensans-regular-webfont');
-@include font-face('Opensans Bold', '../../../themes/portfolio-theme/fonts/opensans-bold-webfont');
-@include font-face('Opensans BoldItalic', '../../../themes/portfolio-theme/fonts/opensans-bolditalic-webfont');
-@include font-face('Opensans ExtraBold', '../../../themes/portfolio-theme/fonts/opensans-extrabold-webfont');
-@include font-face('Opensans ExtraBoldItalic', '../../../themes/portfolio-theme/fonts/opensans-extrabolditalic-webfont');
-@include font-face('Opensans Italic', '../../../themes/portfolio-theme/fonts/opensans-italic-webfont');
-@include font-face('Opensans Light', '../../../themes/portfolio-theme/fonts/opensans-light-webfont');
-@include font-face('Opensans LightItalic', '../../../themes/portfolio-theme/fonts/opensans-lightitalic-webfont');
+@include font-face(
+  "Opensans Regular",
+  "../../../themes/portfolio-theme/fonts/opensans-regular-webfont"
+);
+@include font-face(
+  "Opensans Bold",
+  "../../../themes/portfolio-theme/fonts/opensans-bold-webfont"
+);
+@include font-face(
+  "Opensans BoldItalic",
+  "../../../themes/portfolio-theme/fonts/opensans-bolditalic-webfont"
+);
+@include font-face(
+  "Opensans ExtraBold",
+  "../../../themes/portfolio-theme/fonts/opensans-extrabold-webfont"
+);
+@include font-face(
+  "Opensans ExtraBoldItalic",
+  "../../../themes/portfolio-theme/fonts/opensans-extrabolditalic-webfont"
+);
+@include font-face(
+  "Opensans Italic",
+  "../../../themes/portfolio-theme/fonts/opensans-italic-webfont"
+);
+@include font-face(
+  "Opensans Light",
+  "../../../themes/portfolio-theme/fonts/opensans-light-webfont"
+);
+@include font-face(
+  "Opensans LightItalic",
+  "../../../themes/portfolio-theme/fonts/opensans-lightitalic-webfont"
+);
 
 ///////////////////////
 // Helpers
 ///////////////////////
-@import 'helpers/typography';
+@import "helpers/typography";
 
 ///////////////////////
 // Components
 ///////////////////////
-@import 'components/layout';
-@import 'components/grid';
-@import 'components/utilities';
-@import 'components/forms';
-@import 'components/header';
-@import 'components/nav';
-@import 'components/footer';
-@import 'components/keyframes';
+@import "components/layout";
+@import "components/grid";
+@import "components/utilities";
+@import "components/forms";
+@import "components/header";
+@import "components/nav";
+@import "components/footer";
+@import "components/keyframes";
 
 ///////////////////////
 // Page types
 ///////////////////////
-@import 'pagetypes/homepage';
-@import 'pagetypes/communitypage';
-@import 'pagetypes/enterpriseholderpage';
-@import 'pagetypes/communityholderpage';
+@import "pagetypes/homepage";
+@import "pagetypes/communitypage";
+@import "pagetypes/enterpriseholderpage";
+@import "pagetypes/communityholderpage";
 
 ///////////////////////
 // Vendor Libraries
 ///////////////////////
-@import 'lib/slicknav';
+@import "lib/slicknav";
