@@ -1,7 +1,6 @@
-@import '../components/base';
+@import "../components/base";
 
 .primary-message {
-
   @include safe-rem(margin, 100 0);
 
   h1 {
@@ -27,13 +26,10 @@
     p {
       @include delay(1.25s);
     }
-
   }
-
 }
 
 .latest-project {
-
   // Isn't really a clean way to scale the project display down, so just remove it for now.
   @include breakpoint($mobile) {
     .laptop {
@@ -52,7 +48,8 @@
     .laptop {
       @include safe-rem(height, 673);
       position: relative;
-      background: url('../../../themes/portfolio-theme/images/laptop.png') no-repeat;
+      background: url("../../../themes/portfolio-theme/images/laptop.png")
+        no-repeat;
 
       // Is shown before the project image animates in
       .screen {
@@ -82,10 +79,14 @@
   @include safe-rem(padding, 50 0);
   @include safe-rem(margin-bottom, 100);
 
-
   border-top: 1px solid $grey-400;
   border-bottom: 1px solid $grey-400;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .6) 100%) $tan-500;
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.6) 100%
+    )
+    $tan-500;
 
   h2 {
     margin: 0;
@@ -104,12 +105,10 @@
     p {
       @include safe-rem(margin-top, 10);
     }
-
   }
 }
 
 .community-released {
-
   .col-4 {
     @include safe-rem(margin, 0 0 100 0);
     @include safe-rem(height, 400);
@@ -117,7 +116,12 @@
     position: relative;
     border: 1px solid $grey-400;
     border-radius: 3px;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .6) 100%) $tan-500;
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.6) 100%
+      )
+      $tan-500;
     text-align: center;
   }
 
@@ -128,7 +132,7 @@
   }
 
   img {
-    @include transition(all .3s linear);
+    @include transition(all 0.3s linear);
     @include circle(125);
     position: absolute;
     top: -15px;
@@ -152,5 +156,4 @@
     margin-right: auto;
     margin-left: auto;
   }
-
 }

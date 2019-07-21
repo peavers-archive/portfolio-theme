@@ -1,4 +1,4 @@
-@import 'base';
+@import "base";
 
 // Set base font size
 $rem-base: 16px;
@@ -7,11 +7,11 @@ $line-height-base: 26px;
 // Vertical rhythm ratio
 $type-rhythm-ratio: 1.14;
 // Desktop Media Query
-$desktop: '(min-width: 1024px)';
+$desktop: "(min-width: 1024px)";
 // Tablet Media Query
-$tablet: '(min-width: 768px) and (max-width: 1023px)';
+$tablet: "(min-width: 768px) and (max-width: 1023px)";
 // Mobile Media Query
-$mobile: '(max-width: 767px)';
+$mobile: "(max-width: 767px)";
 // Set Grid Column Count
 $grid-columns: 12;
 // Set Grid Gutter (as px)

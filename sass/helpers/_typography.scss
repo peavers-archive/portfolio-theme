@@ -1,4 +1,4 @@
-@import '../components/base';
+@import "../components/base";
 
 html {
   position: relative;
@@ -12,7 +12,7 @@ body {
 html,
 body {
   color: $grey-500;
-  font-family: 'OpenSans Regular', serif;
+  font-family: "OpenSans Regular", serif;
 }
 
 p {
@@ -22,19 +22,18 @@ p {
     @include safe-rem(margin-top, 10);
     @include safe-rem(margin-bottom, 10);
   }
-
 }
 
 h1 {
   @include safe-rem(margin-bottom, 25);
-  font-family: 'OpenSans Light', serif;
+  font-family: "OpenSans Light", serif;
 }
 
 h2 {
   @include safe-rem(font-size, 20);
   @include safe-rem(padding-bottom, 40);
   @include safe-rem(margin-bottom, 40);
-  border-bottom: 1px solid rgba(172, 172, 164, .3);
+  border-bottom: 1px solid rgba(172, 172, 164, 0.3);
   color: $tan-100;
 }
 
@@ -49,17 +48,17 @@ h4 {
   display: inline-block;
   border-top: 1px solid $grey-300;
   color: $grey-500;
-  font-family: 'OpenSans Bold', serif;
+  font-family: "OpenSans Bold", serif;
   text-transform: uppercase;
 }
 
 strong {
   @include safe-rem(font-size, 16);
-  font-family: 'OpenSans Bold', serif;
+  font-family: "OpenSans Bold", serif;
 }
 
 a:not(.button) {
-  @include transition(border-bottom-color .3s ease);
+  @include transition(border-bottom-color 0.3s ease);
   padding-bottom: 2px;
   border: 0;
   border-bottom: 1px solid rgba(172, 172, 164, 0);
@@ -67,7 +66,7 @@ a:not(.button) {
   font-family: "OpenSans Bold", serif;
 
   &:hover {
-    border-bottom: 1px solid rgba(172, 172, 164, .4);
+    border-bottom: 1px solid rgba(172, 172, 164, 0.4);
   }
 }
 

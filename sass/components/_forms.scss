@@ -1,4 +1,4 @@
-@import 'base';
+@import "base";
 
 .success-message {
   @include animate-slide();
@@ -7,7 +7,7 @@
   @include safe-rem(padding, 25 50);
   @include border-radius(3);
   background-color: $white;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, .1), 0 1px 4px rgba(0, 0, 0, .1);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
 .form-inner {
@@ -15,7 +15,7 @@
   @include safe-rem(padding, 50);
   @include border-radius(3);
   background-color: $white;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, .1), 0 1px 4px rgba(0, 0, 0, .1);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
 .form {
@@ -52,7 +52,7 @@
   input,
   textarea,
   select {
-    @include transition(all .2s ease-in);
+    @include transition(all 0.2s ease-in);
     @include safe-rem(margin-bottom, 20);
     @include safe-rem(font-size, 16);
     @include safe-rem(padding, 7);
@@ -63,8 +63,8 @@
   select {
     @include safe-rem(height, 30);
     width: 100%;
-    text-indent: .01px;
-    text-overflow: '';
+    text-indent: 0.01px;
+    text-overflow: "";
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -79,7 +79,7 @@
 
   textarea {
     @include safe-rem(height, 150);
-    @include transition(all .2s ease-in);
+    @include transition(all 0.2s ease-in);
   }
 
   .req-indicator,
@@ -87,7 +87,6 @@
   .validation,
   .error {
     color: $green-500;
-
   }
 
   .action {
@@ -95,4 +94,3 @@
     @include safe-rem(font-size, 16);
   }
 }
-

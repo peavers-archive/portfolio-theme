@@ -1,4 +1,4 @@
-@import '../components/base';
+@import "../components/base";
 
 /*
     Mobile Menu Core Style
@@ -26,7 +26,7 @@
 }
 
 .slicknav_menu .slicknav_no-text {
-  margin: 0
+  margin: 0;
 }
 
 .slicknav_menu .slicknav_icon-bar {
@@ -42,16 +42,16 @@
 }
 
 .slicknav_btn .slicknav_icon-bar + .slicknav_icon-bar {
-  margin-top: 0.188em
+  margin-top: 0.188em;
 }
 
 .slicknav_nav {
-  clear: both
+  clear: both;
 }
 
 .slicknav_nav ul,
 .slicknav_nav li {
-  display: block
+  display: block;
 }
 
 .slicknav_nav .slicknav_arrow {
@@ -68,16 +68,16 @@
 }
 
 .slicknav_nav a {
-  display: block
+  display: block;
 }
 
 .slicknav_nav .slicknav_item a,
 .slicknav_nav .slicknav_parent-link a {
-  display: inline
+  display: inline;
 }
 
 .slicknav_brand {
-  float: left
+  float: left;
 }
 
 .slicknav_menu:before,
@@ -87,12 +87,12 @@
 }
 
 .slicknav_menu:after {
-  clear: both
+  clear: both;
 }
 
 /* IE6/7 support */
 .slicknav_menu {
-  *zoom: 1
+  *zoom: 1;
 }
 
 /*
@@ -122,7 +122,7 @@
 
 /* Button Text */
 .slicknav_menu .slicknav_menutxt {
-  color: #FFF;
+  color: #fff;
   font-weight: bold;
   text-shadow: 0 1px 3px #000;
 }
@@ -144,7 +144,8 @@
   font-size: 0.875em;
 }
 
-.slicknav_nav, .slicknav_nav ul {
+.slicknav_nav,
+.slicknav_nav ul {
   list-style: none;
   overflow: hidden;
 }
